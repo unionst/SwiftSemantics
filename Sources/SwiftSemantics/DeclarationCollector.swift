@@ -73,7 +73,9 @@ open class DeclarationCollector: SyntaxVisitor {
     public private(set) var variables: [Variable] = []
 
     /// Creates a new declaration collector.
-    public override init() {}
+    public override init(viewMode: SyntaxTreeViewMode = .sourceAccurate) {
+        super.init(viewMode: viewMode)
+    }
 
     // MARK: - SyntaxVisitor
 
