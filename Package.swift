@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/apple/swift-syntax", .branch("0.50600.0-SNAPSHOT-2022-01-24"))
+        .package(url: "https://github.com/unionst/SwiftSyntax.git", .branchItem("main")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -25,7 +25,7 @@ let package = Package(
         .target(
             name: "SwiftSemantics",
             dependencies: [
-                .product(name: "SwiftSyntax", package: "swift-syntax")
+                .product(name: "SwiftSyntax", package: "SwiftSyntax"),
             ]
         ),
         .testTarget(
